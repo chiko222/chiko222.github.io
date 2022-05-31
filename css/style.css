@@ -298,8 +298,8 @@ scroll animation
 .fadeIn.showTitle {
   position: relative;
   z-index: 2;
-  -webkit-animation: titleIn 0.6s ease-out forwards;
-          animation: titleIn 0.6s ease-out forwards;
+  -webkit-animation: titleIn 0.8s ease-out forwards;
+          animation: titleIn 0.8s ease-out forwards;
 }
 
 .fadeInImg.show {
@@ -312,8 +312,8 @@ scroll animation
   top: 0;
   left: 0;
   color: #FC4DA5;
-  -webkit-animation: cloneIn 0.6s ease-out forwards;
-          animation: cloneIn 0.6s ease-out forwards;
+  -webkit-animation: cloneIn 0.8s ease-out forwards;
+          animation: cloneIn 0.8s ease-out forwards;
 }
 
 @-webkit-keyframes smoothIn {
@@ -359,7 +359,7 @@ scroll animation
 }
 @-webkit-keyframes cloneIn {
   0% {
-    transform: translateX(20px);
+    transform: translateX(40px);
     opacity: 0;
   }
   100% {
@@ -369,7 +369,7 @@ scroll animation
 }
 @keyframes cloneIn {
   0% {
-    transform: translateX(20px);
+    transform: translateX(40px);
     opacity: 0;
   }
   100% {
