@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chikako Kawashima Portfolio site</title>
+    <meta name="description" content="Chikako Kawatashimaのポートフォリオサイトです。" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon/webclipicon -->
+    <link rel="shortcut icon" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="webclip.png" />
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="Chikako Kawashima Portfolio site" />
+    <meta property="og:url" content="URL(絶対パス)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Chikako Kawashima Portfolio site" />
+    <meta property="og:description" content="Chikako Kawatashimaのポートフォリオサイトです。" />
+    <meta property="og:image" content="URL(絶対パス)" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Chikako Kawatashimaのポートフォリオサイトです。" />
+    <meta name="twitter:image:src" content="URL(絶対パス)" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,700&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/f1693f3bfe.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body id="portfolio">
+    <div class="bg">
+      <div id="particles-js"></div>
+    </div>
+
+    <header>
+      <h1>
+        <span class="randomAnime">CHIKAKO</span>
+        <span class="randomAnime">KAWASHIMA</span>
+      </h1>
+      <div class="header__scrolldown"></div>
+    </header>
+
+    <main>
+      <section class="about">
+        <h2 class="fadeIn titleIn"><span>A</span>BOUT</h2>
+        <p class="fadeIn">フロントエンドエンジニア志望の30代主婦です。過去にwebデザイン、ディレクター業務に2年程携わっていましたが、東京を離れるのをきっかけにこの業界から離れ、その後10年のブランクがあります。</p>
+        <p class="fadeIn u-mt16">独学で、改めてコーディングを勉強し直した後Javascriptを勉強しています。今はVueを習得中。元々知識欲が強いタイプなので、やればやるほどもっと知りたいことややってみたいことが増えていきます。Vueとの違いも興味があるのでReactも勉強したいし、インタラクティブなアニメーションやグラフィックを創れるようにもなりたい。性格的にも、色々なことができるオールラウンダーを目指そうかなと思っています。先は長いです。</p>
+      </section>
+      <section class="skills">
+        <h2 class="fadeIn titleIn"><span>S</span>KILLS</h2>
+        <ul class="skills__list fadeIn">
+          <li class="skills__item">HTML</li>
+          <li class="skills__item">CSS</li>
+          <li class="skills__item">SCSS</li>
+          <li class="skills__item">JavaScript</li>
+          <li class="skills__item">JQuery</li>
+          <li class="skills__item">Vue</li>
+          <li class="skills__item">WordPress</li>
+          <li class="skills__item">webpack</li>
+          <li class="skills__item">Git</li>
+          <li class="skills__item">Photoshop</li>
+          <li class="skills__item">Illustrator</li>
+          <li class="skills__item">AdobeXD</li>
+        </ul>
+      </section>
+      <section class="works">
+        <h2 class="fadeIn titleIn"><span>W</span>ORKS</h2>
+        <ul class="works__list">
+          <li class="works__item fadeIn">
+            <span class="works__number">01</span>
+            <div class="works__thumb">
+              <a href=""><img srcset="img/capture01@.jpg 1x, img/capture01@2x.jpg 2x" src="img/capture01@2x.jpg" alt="Attractif" decoding="async" loading="lazy"></a>
+            </div>
+            <time class="works__date" datetime="2022-04">2022.04</time>
+            <div class="works__info">
+              <h3 class="works__name">アクセサリーショップ Attractif<span>-sample-</span></h3>
+              <p class="works__tech u-mt16">HTML / CSS / JavaScript / swiper.js</p>
+              <p class="works__desc u-mt16">サンプルサイトのため、リンクはRecommendページのみです。フレームワークは使用せず、Vanilla JSで書いています。CSS設計については、参考にしたものはありますが明確なルール化はできていません。</p>
+            </div>
+          </li>
+          <li class="works__item fadeIn">
+            <span class="works__number">02</span>
+            <div class="works__thumb">
+              <a href=""><img srcset="img/capture02@.jpg 1x, img/capture02@2x.jpg 2x" src="img/capture01@2x.jpg" alt="Attractif" decoding="async" loading="lazy"></a>
+            </div>
+            <time class="works__date" datetime="2022-05">2022.05</time>
+            <div class="works__info">
+              <h3 class="works__name">Hair Studio Land<span>-sample-</span></h3>
+              <p class="works__tech u-mt12">HTML / CSS / SCSS / JavaScript / Vue / webpack /date-fns.js</p>
+              <p class="works__desc u-mt12">CSS設計はBEMをベースにしています。動的な部分はVueを使用。思いつきで予約のアプリケーションを作ってみましたが、非常に時間がかかりました。</p>
+            </div>
+          </li>
+        </ul>
+        <div class="github fadeIn">
+          <p>WORKS02で使用している予約アプリの簡易版をGitHubで公開しています。</p>
+          <a href="https://github.com/chiko222/reserve-app"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/particles.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src="js/jquery.lettering.js"></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
