@@ -2,30 +2,41 @@
 
 {
   // スクロールイベント
-  window.addEventListener('scroll', () => {
-    const scroll = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const showTargets = document.querySelectorAll( '.fadeIn');
-    showTargets.forEach(showTarget => {
-      const rect = showTarget.getBoundingClientRect().top;
-      const offset = rect + scroll;
-      if (scroll > offset - windowHeight + 50) {
-        if (showTarget.classList.contains('titleIn')) {
-          const clone = showTarget.cloneNode(true);
-          clone.classList.add('clone');
-          clone.classList.remove('titleIn');
-          showTarget.classList.remove('titleIn');
-          showTarget.after(clone);
-          showTarget.classList.add('showTitle');
-          const remove = () => {
-            clone.remove();
-          };
-          setTimeout(remove, 1400);
-        } else if (!showTarget.classList.contains('showTitle') && !showTarget.classList.contains('clone')) {
-          showTarget.classList.add('show');
-        }
+  const targets = document.querySelectorAll('.fadeIn');
+
+  let options = {
+    threshold: 0.2
+  }
+
+  function callback(entries, obs) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
       }
-    }) ;
+      if (entry.target.classList.contains('titleIn')) {
+        const clone = entry.target.cloneNode(true);
+        clone.classList.add('clone');
+        clone.classList.remove('titleIn');
+        entry.target.after(clone);
+        entry.target.classList.remove('titleIn');
+        entry.target.classList.add('showTitle');
+        const remove = () => {
+          clone.remove();
+        }
+        setTimeout(remove, 1400);
+      } else if (!entry.target.classList.contains('showTitle') && !entry.target.classList.contains('clone')) {
+        if (entry.target.classList.contains('.fadeInImg')) {
+          options.threshold = 0;
+        }
+        entry.target.classList.add('show');
+      }
+      obs.unobserve(entry.target);
+    })
+  }
+
+  const observer = new IntersectionObserver(callback, options);
+  targets.forEach(target => {
+    observer.observe(target);
   });
 
   // h1のアニメーション

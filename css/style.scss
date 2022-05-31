@@ -103,6 +103,10 @@ scroll animation
   }
 }
 
+.fadeInImg.show {
+  animation: smoothIn 1s 0s forwards;
+}
+
 .clone {
   position: absolute;
   top: 0;
@@ -198,13 +202,13 @@ header {
 
 @keyframes arrowMove {
   0% {
-    top: calc(65vh - 20rem);
+    top: calc(65vh - 26rem);
   }
   30% {
-    top: calc(65vh - 18rem);
+    top: calc(65vh - 24rem);
   }
   100% {
-    top: calc(65vh - 20rem);
+    top: calc(65vh - 26rem);
   }
 }
 
